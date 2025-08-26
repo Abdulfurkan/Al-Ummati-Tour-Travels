@@ -36,11 +36,11 @@ export function EnhancedButton({
   const buttonVariants = {
     initial: { scale: 1 },
     hover: { 
-      scale: 1.05,
+      scale: 1.02,
       transition: { duration: 0.2, ease: "easeInOut" as const }
     },
     tap: { 
-      scale: 0.95,
+      scale: 0.98,
       transition: { duration: 0.1 }
     }
   };
@@ -49,9 +49,9 @@ export function EnhancedButton({
     initial: { boxShadow: "0 0 0 0 rgba(34, 197, 94, 0)" },
     hover: { 
       boxShadow: variant === "default" 
-        ? "0 0 20px 2px rgba(34, 197, 94, 0.3)" 
-        : "0 0 15px 1px rgba(34, 197, 94, 0.2)",
-      transition: { duration: 0.3 }
+        ? "0 0 12px 1px rgba(34, 197, 94, 0.2)" 
+        : "0 0 8px 0px rgba(34, 197, 94, 0.15)",
+      transition: { duration: 0.2 }
     }
   };
 
@@ -62,7 +62,7 @@ export function EnhancedButton({
         target={target}
         rel={rel}
         className={cn(
-          "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background",
+          "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background relative overflow-hidden isolate",
           variant === "default" && "bg-emerald-600 text-white hover:bg-emerald-700",
           variant === "outline" && "border border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-950",
           variant === "ghost" && "hover:bg-emerald-50 hover:text-emerald-600 dark:hover:bg-emerald-950",
@@ -82,7 +82,7 @@ export function EnhancedButton({
       >
         <motion.div
           variants={glowVariants}
-          className="absolute inset-0 rounded-md"
+          className="absolute inset-0 rounded-md -z-10"
           initial="initial"
           whileHover="hover"
         />
@@ -95,7 +95,7 @@ export function EnhancedButton({
     <MotionButton
       variant={variant}
       size={size}
-      className={cn("relative overflow-hidden", className)}
+      className={cn("relative overflow-hidden isolate", className)}
       onClick={onClick}
       type={type}
       disabled={disabled}
@@ -107,7 +107,7 @@ export function EnhancedButton({
     >
       <motion.div
         variants={glowVariants}
-        className="absolute inset-0"
+        className="absolute inset-0 -z-10"
         initial="initial"
         whileHover="hover"
       />

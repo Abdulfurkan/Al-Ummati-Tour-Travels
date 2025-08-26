@@ -55,49 +55,49 @@ const workingHours = [
 
 export default function Contact() {
   return (
-    <section className="py-20 bg-white dark:bg-gray-900">
+    <section className="py-16 sm:py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 px-4 py-2">
-            <MessageSquare className="w-4 h-4 mr-2" />
+        <div className="text-center mb-12 sm:mb-16">
+          <Badge variant="outline" className="mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2">
+            <MessageSquare className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
             Get In Touch
           </Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 px-2">
             Contact AL Ummati Tour & Travels
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2 sm:px-0">
             Ready to start your spiritual journey? Our travel experts are here to help you 
             plan the perfect Umrah or Hajj experience.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12">
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <Card className="shadow-lg border-0 dark:bg-gray-800">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
-                  <Send className="w-6 h-6 mr-3 text-emerald-600" />
+                <CardTitle className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white flex items-center">
+                  <Send className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-emerald-600" />
                   Send Us a Message
                 </CardTitle>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                   Fill out the form below and we&apos;ll get back to you within 24 hours
                 </p>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-4 sm:space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       First Name *
                     </label>
-                    <Input placeholder="Enter your first name" />
+                    <Input placeholder="Enter your first name" className="text-sm sm:text-base" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Last Name *
                     </label>
-                    <Input placeholder="Enter your last name" />
+                    <Input placeholder="Enter your last name" className="text-sm sm:text-base" />
                   </div>
                 </div>
 
@@ -106,13 +106,13 @@ export default function Contact() {
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Email *
                     </label>
-                    <Input type="email" placeholder="your@email.com" />
+                    <Input type="email" placeholder="your@email.com" className="text-sm sm:text-base" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Phone Number *
                     </label>
-                    <Input type="tel" placeholder="+91 94143 11012" />
+                    <Input type="tel" placeholder="+91 94143 11012" className="text-sm sm:text-base" />
                   </div>
                 </div>
 
@@ -120,7 +120,7 @@ export default function Contact() {
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Service Interested In
                   </label>
-                  <select className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 dark:bg-gray-700 dark:text-white">
+                  <select className="w-full px-3 py-2 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 dark:bg-gray-700 dark:text-white">
                     <option value="">Select a service</option>
                     <option value="umrah">Umrah Package</option>
                     <option value="hajj">Hajj Package</option>
@@ -131,25 +131,26 @@ export default function Contact() {
                   </select>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Preferred Travel Date
-                  </label>
-                  <Input type="date" />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Number of Travelers
-                  </label>
-                  <select className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 dark:bg-gray-700 dark:text-white">
-                    <option value="">Select number</option>
-                    <option value="1">1 Person</option>
-                    <option value="2">2 People</option>
-                    <option value="3-5">3-5 People</option>
-                    <option value="6-10">6-10 People</option>
-                    <option value="10+">More than 10</option>
-                  </select>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Preferred Travel Date
+                    </label>
+                    <Input type="date" className="text-sm sm:text-base" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Number of Travelers
+                    </label>
+                    <select className="w-full px-3 py-2 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 dark:bg-gray-700 dark:text-white">
+                      <option value="">Select number</option>
+                      <option value="1">1 Person</option>
+                      <option value="2">2 People</option>
+                      <option value="3-5">3-5 People</option>
+                      <option value="6-10">6-10 People</option>
+                      <option value="10+">More than 10</option>
+                    </select>
+                  </div>
                 </div>
 
                 <div>
@@ -159,15 +160,16 @@ export default function Contact() {
                   <Textarea 
                     placeholder="Tell us about your requirements, questions, or any special needs..."
                     rows={4}
+                    className="text-sm sm:text-base"
                   />
                 </div>
 
-                <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3">
+                <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 text-sm sm:text-base">
                   <Send className="w-4 h-4 mr-2" />
                   Send Message
                 </Button>
 
-                <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
+                <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 text-center">
                   We respect your privacy. Your information will not be shared with third parties.
                 </p>
               </CardContent>
