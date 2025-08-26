@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { CardSkeleton, PackageSkeleton, ServiceSkeleton } from "./skeleton";
+import { PackageSkeleton, ServiceSkeleton } from "./skeleton";
 
 interface PageLoaderProps {
   children: React.ReactNode;

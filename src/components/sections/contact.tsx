@@ -82,7 +82,7 @@ export default function Contact() {
                   Send Us a Message
                 </CardTitle>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Fill out the form below and we'll get back to you within 24 hours
+                  Fill out the form below and we&apos;ll get back to you within 24 hours
                 </p>
               </CardHeader>
               <CardContent className="space-y-6">

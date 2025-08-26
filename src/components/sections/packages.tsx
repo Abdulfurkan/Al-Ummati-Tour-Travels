@@ -1,11 +1,10 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { EnhancedButton } from "@/components/ui/enhanced-button";
 import { FadeIn } from "@/components/ui/fade-in";
 import { 
   Calendar, 
-  MapPin, 
   Users, 
   Star,
   Plane,

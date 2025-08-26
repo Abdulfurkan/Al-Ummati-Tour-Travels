@@ -1,11 +1,9 @@
-import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { EnhancedButton } from "@/components/ui/enhanced-button";
 import Image from "next/image";
 import { 
   Phone, 
   Mail, 
-  MapPin,
   Menu,
   MessageSquare
 } from "lucide-react";

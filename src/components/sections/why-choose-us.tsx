@@ -96,7 +96,7 @@ export default function WhyChooseUs() {
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             With over 15 years of experience and thousands of satisfied pilgrims, 
-            we're committed to making your sacred journey exceptional.
+            we&apos;re committed to making your sacred journey exceptional.
           </p>
         </div>
 
@@ -161,7 +161,7 @@ export default function WhyChooseUs() {
                     ))}
                   </div>
                   <blockquote className="text-gray-700 dark:text-gray-300 mb-4 italic">
-                    "{testimonial.text}"
+                    &quot;{testimonial.text}&quot;
                   </blockquote>
                   <div>
                     <div className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</div>
